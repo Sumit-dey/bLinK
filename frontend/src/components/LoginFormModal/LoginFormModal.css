@@ -1,0 +1,54 @@
+.loginBtn {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.loginModal {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  width: 15rem;
+  border: none;
+}
+
+.loginModalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.loginButton {
+  display: flex;
+  color: white;
+  background-color: black;
+  border-color: transparent;
+  padding: 1px 6px;
+  border-radius: 4px;
+  height: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.demoButton {
+  display: flex;
+  color: white;
+  background-color: black;
+  border-color: transparent;
+  padding: 1px 6px;
+  border-radius: 4px;
+  height: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+input {
+  height: 2rem;
+}
+li > p {
+  color: coral;
+}
