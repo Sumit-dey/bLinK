@@ -1,0 +1,44 @@
+.splash-container {
+  display: flex;
+  height: 700px;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://combo.staticflickr.com/ap/build/images/sohp/2020-top-25/Fantasy_Island_Daniel_Cheong.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 35rem;
+}
+
+.description > h1 {
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+}
+.description > p {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+}
+
+.description-signupBtn {
+  height: 2.5rem;
+  width: 8rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
