@@ -1,29 +1,28 @@
-import React from "react";
-import "./SplashPage.css";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { Redirect, NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-const SplashPage = () => {
-  const routeChange = () => {
-    let path = "/homepage";
-    history.push(path);
-  };
-  const history = useHistory();
-  return (
-    <div className="splash-container">
-      <div className="description-container">
-        <div className="description">
-          <h1>Find your inspiration.</h1>
-          <p>
-            Join the Blink community, home to tens of billions of photos of
-            your favorite moments.
-          </p>
-          <button onClick={routeChange} className="description-signupBtn">
-            Explore
-          </button>
+import './SplashPage.css';
+
+function SplashPage() {
+    const sessionUser = useSelector(state => state.session.user);
+    if (sessionUser) return <Redirect to = '/homepage' />;
+
+    return (
+        <div className = 'splash-container'>
+            <div className = 'splash-content-div'>
+                <h1 className = 'splash-h1'>Find your inspiration.</h1>
+                <h3 className = 'splash-h3'>
+                    Join the bLinK community, home to tons of billions of photos of your favourite moments.
+                </h3>
+                <NavLink
+                    className = 'splash-signup-link'
+                    to = '/signup'>
+                        Join for Free
+                </NavLink>
+            </div>
         </div>
-      </div>
-    </div>
-  );
-};
+    )
+}
 
 export default SplashPage;

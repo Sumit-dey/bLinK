@@ -1,60 +1,68 @@
-import { useState } from "react";
-import * as sessionActions from "../../store/session";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect, useHistory } from "react-router-dom";
-import "./LoginForm.css";
+import React, { useState } from 'react';
+import * as sessionActions from '../../store/session';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
-const LoginFormPage = () => {
-  const dispatch = useDispatch();
-  const sessionUser = useSelector((state) => state.session.user);
-  const history = useHistory();
-  const [credential, setCredential] = useState("");
-  const [password, setPassword] = useState("");
-  const [validationErrors, setValidationErrors] = useState([]);
+import './LoginForm.css';
+// import dotLogo from '../../assets/Drivr-dot-logo.png';
 
-  if (sessionUser) return <Redirect to={`/homepage`} />;
+function LoginFormPage() {
+    const dispatch = useDispatch();
+    const sessionUser = useSelector(state => state.session.user);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setValidationErrors([]);
-    dispatch(sessionActions.loginUser({ credential, password })).catch(
-      async (res) => {
-        const data = await res.json();
-        if (data && data.errors) {
-          return setValidationErrors(data.errors);
-        }
-      }
+    const [credential, setCredential] = useState('');
+    const [password, setPassword] = useState('');
+    const [errors, setErrors] = useState([]);
+
+    if (sessionUser) return (
+        <Redirect to = "/homepage" />
     );
-  };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {validationErrors.map((error, idx) => (
-          <li key={idx}>{error}</li>
-        ))}
-      </ul>
-      <label>
-        Username or Email
-        <input
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
-  );
-};
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setErrors([]);
+
+        return dispatch(sessionActions.login({ credential, password }))
+            .catch(async (res) => {
+                const data = await res.json();
+                if (data && data.errors) setErrors(data.errors);
+            });
+    }
+
+    return (
+        <div className = 'login-container'>
+            <form className = 'loginForm' onSubmit = {handleSubmit}>
+                {/* <img className = 'login-form-ele' src = { dotLogo } alt = 'dot logo'/> */}
+                <p className = 'login-form-ele'>Log in</p>
+                <ul className = 'auth-errors login-form-ele'>
+                    {errors.map((error, index) => <li key = {index} className = 'login-errors'>
+                        {error}
+                    </li>)}
+                </ul>
+                <input
+                    className = 'login-input login-form-ele'
+                    type = 'text'
+                    value = { credential }
+                    onChange = {(e) => setCredential(e.target.value)}
+                    placeholder = 'Username or Email'
+                    required
+                />
+                <input
+                    className = 'login-input login-form-ele'
+                    type = 'password'
+                    value = { password }
+                    onChange = {(e) => setPassword(e.target.value)}
+                    placeholder = 'Password'
+                    required
+                />
+                <button className = 'login-submit' type = 'submit'>Log In</button>
+                <button className = 'login-submit' onClick = {() => {
+                    setCredential('Demo-lition');
+                    setPassword('password')
+                }}>Demo</button>
+            </form>
+        </div>
+    )
+}
 
 export default LoginFormPage;

@@ -1,0 +1,200 @@
+li {
+    list-style-type: none;
+}
+.fas fa-user-circle{
+    width: 20px;
+}
+
+#nav-logo {
+    height: 5rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+
+
+.nav-authed-user-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-upload-button {
+    box-sizing: border-box;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+.navbar-upload-button:hover {
+    transform: scale(1.1);
+}
+
+.navbar-albums-button {
+    box-sizing: border-box;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+.navbar-albums-button:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 7rem;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.25) ;
+}
+
+.nav-left-container {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-explore-button {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    margin: 0.5rem;
+    transition: all 0.4s ease;
+}
+
+.navbar-explore-button:hover {
+    transform: scale(1.1);
+}
+
+.portfolio-links {
+    box-sizing: border-box;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.user-auth-li {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+    margin-right: 1.5rem;
+}
+
+.user-auth-div {
+    display: flex;
+    align-items: center;
+}
+
+.profile-button {
+    transition: all 0.4s ease;
+    margin: 0.5rem;
+}
+
+.profile-button:hover {
+    transform: scale(1.15);
+}
+
+.profile-container {
+    display: flex;
+    background-color: white;
+    box-sizing: border-box;
+    border: 1px;
+    border-radius: 4px;
+    padding: .25rem;
+}
+
+.profile-dropdown {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+}
+
+.showMenu-items {
+    display: flex;
+    box-sizing: border-box;
+    margin: .15rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.showMenu-items:hover {
+    transform: scale(1.05);
+}
+
+.profile-nav {
+    color: black;
+}
+
+.profile-email-p {
+    margin: 0 0 0 .5rem;
+}
+
+.profile-logout {
+    background-color: #f24236;
+    color: white;
+    font-size: 1rem;
+    border: 1px;
+    border-radius: 4px;
+    width: 75%;
+    height: 1.5rem;
+}
+.upload-photo,.create-album{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.login,
+.signup {
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.bari{
+
+    font-size: large;
+    color: black;
+    background-color: white;
+    margin-left: 50px;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.login,.signup {
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    margin-left: 1rem;
+    padding: 7.5px 15px;
+}
+
+.bari:hover,.login:hover,.signup:hover {
+    transform: scale(1.1);
+}

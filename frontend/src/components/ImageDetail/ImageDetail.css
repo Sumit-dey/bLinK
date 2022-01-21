@@ -1,0 +1,40 @@
+.homepage-single-img-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    box-sizing: border-box;
+}
+
+.homepage-single-div-style {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 75%;
+    height: auto;
+    background-color: white;
+    border: 1px;
+    border-radius: 8px;
+}
+
+.homepage-single-img-div {
+    position: relative;
+    width: 5rem;
+    height: auto;
+    box-sizing: border-box;
+    margin: 1rem;
+    width: auto;
+}
+
+.homepage-single-img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.homepage-single-img-content {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-bottom: 1rem;
+}

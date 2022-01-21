@@ -4,30 +4,28 @@ const { User } = require('../db/models');
 
 const { secret, expiresIn } = jwtConfig;
 
-// Sends a JWT Cookie
+// creates jwt token using imported secret
 const setTokenCookie = (res, user) => {
-    // Create the token.
     const token = jwt.sign(
         { data: user.toSafeObject() },
         secret,
-        { expiresIn: parseInt(expiresIn) }, // 604,800 seconds = 1 week
+        { expiresIn: parseInt(expiresIn) }
     );
 
-    const isProduction = process.env.NODE_ENV === "production";
+    const isProduction = process.env.NODE_ENV === 'production';
 
-    // Set the token cookie
     res.cookie('token', token, {
-        maxAge: expiresIn * 1000, // maxAge in milliseconds
+        maxage: expiresIn * 1000,
         httpOnly: true,
         secure: isProduction,
-        sameSite: isProduction && "Lax",
+        sameSite: isProduction && 'Lax',
     });
 
     return token;
 };
 
+// restores a user's session based on JWT token
 const restoreUser = (req, res, next) => {
-    // token parsed from cookies
     const { token } = req.cookies;
 
     return jwt.verify(token, secret, null, async (err, jwtPayload) => {
@@ -49,7 +47,8 @@ const restoreUser = (req, res, next) => {
     });
 };
 
-// If there is no current user, return an error
+// if valid JWT cookie exists, user will be loaded into req.user
+// then it will check if there is a valid session user, throw an error if not
 const requireAuth = [
     restoreUser,
     function (req, res, next) {
@@ -59,8 +58,12 @@ const requireAuth = [
         err.title = 'Unauthorized';
         err.errors = ['Unauthorized'];
         err.status = 401;
-        return next(err);
-    },
-];
+        return next(err)
+    }
+]
 
-module.exports = { setTokenCookie, restoreUser, requireAuth };
+module.exports = {
+    setTokenCookie,
+    restoreUser,
+    requireAuth
+}
