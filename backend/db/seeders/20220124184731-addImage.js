@@ -21,7 +21,7 @@ module.exports = {
        userId: 1,
        albumId: 1,
        imageUrl: 'https://www.localguidesconnect.com/t5/image/serverpage/image-id/696723i1EFC70E91AE19D83/image-size/large?v=v2&px=999',
-       content: 'River',
+       content: 'River Surma',
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -35,18 +35,12 @@ module.exports = {
      },
      {
        userId: 2,
-       imageUrl: 'https://res.cloudinary.com/depdd11lz/image/upload/v1636565772/Drivr-snow-subie_d3pu22.jpg',
-       content: 'Moody Subie',
+       imageUrl: 'https://cdn.discordapp.com/attachments/536996013911572484/933515979487588382/51826891309_f11cdef54a_b.jpg',
+       content: 'Snow Night',
        createdAt: new Date(),
        updatedAt: new Date()
      },
-     {
-       userId: 3,
-       imageUrl: '',
-       content: 'Village',
-       createdAt: new Date(),
-       updatedAt: new Date()
-     },
+
      {
       userId: 1,
       albumId: 2,
