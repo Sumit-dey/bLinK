@@ -7,11 +7,9 @@ import { loadImages } from '../../store/image';
 import './HomePage.css';
 
 function HomePage() {
-    const images = useSelector((state) => Object.values(state.image.all));
-    // const img = useSelector(state => state.imageReducer);
-    // console.log("hahahahah",img)
-    // const images=Object.assign([],img);
     const dispatch = useDispatch();
+    const images = useSelector((state) => Object.values(state.image.all));
+
     useEffect(() => {
         dispatch(loadImages())
     },[dispatch]);
@@ -20,31 +18,34 @@ function HomePage() {
     if (!sessionUser) return <Redirect to = '/' />;
 
     return (
-        <>
+        <div className='homepage-container'>
             <div className = 'homepage-headline-div'>
                 <h1 className = 'homepage-headline'>
                     Explore
                 </h1>
             </div>
             <div className = 'homepage-all-images'>
-                {images?.length > 0 ? images.map(image => (
+                {images.length > 0 ? images.map(image => (
                     <NavLink
                         className = 'homepage-nav-wrapper'
                         key = {image.id}
                         to = {`/homepage/images/${image.id}`}
                         onClick = {() => console.log('hit redirect')}
                     >
-                        <div className = 'homepage-indiv-image'>
-                            <img
-                                src = {image.imageUrl}
-                                alt = 'Photo'
-                                className = 'homepage-images'
-                            />
+                        <img
+                            src = {image.imageUrl}
+                            alt = 'car'
+                            className = 'homepage-images'
+                        />
+                        <div
+                            className = 'homepage-image-content'
+                        >
+                            {image.content}
                         </div>
                     </NavLink>
                 )) : null}
             </div>
-        </>
+        </div>
     )
 }
 

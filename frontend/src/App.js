@@ -1,32 +1,31 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Route, Switch,Redirect } from "react-router-dom";
-import LoginFormPage from "./components/LoginFormPage";
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import SplashPage from './components/SplashPage';
-import SignupFormPage from "./components/SignupFormPage";
-import AllAlbums from './components/AllAlbums';
-import ImageDetail from './components/ImageDetail';
-import AddAlbum from './components/AddAlbum';
-import AddImage from './components/AddImage';
+import LoginFormPage from './components/LoginFormPage';
+import SignupFormPage from './components/SignupFormPage';
+import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
-import SingleAlbum from './components/SingleAlbum';
-import Navigation from "./components/Navigation";
+import ImageDetail from './components/ImageDetail';
 import UserProfile from './components/UserProfile';
 import UserImage from './components/UserImage';
-import * as sessionActions from "./store/session";
-
-
+import AddImage from './components/AddImage';
+import AllAlbums from './components/AllAlbums';
+import SingleAlbum from './components/SingleAlbum';
+import AddAlbum from './components/AddAlbum';
+import * as sessionActions from './store/session';
 
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
   return (
     <>
-      <Navigation isLoaded={isLoaded} />
+      <Navigation isLoaded = { isLoaded } />
       {isLoaded && (
         <Switch>
           <Route exact path = '/'>
@@ -35,10 +34,10 @@ function App() {
           <Route exact path = '/homepage'>
             <HomePage />
           </Route>
-          <Route path="/login">
+          <Route path = '/login'>
             <LoginFormPage />
           </Route>
-          <Route path="/signup">
+          <Route path = '/signup'>
             <SignupFormPage />
           </Route>
           <Route path = '/homepage/images/:id'>

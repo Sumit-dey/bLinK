@@ -12,7 +12,6 @@ function AddImage() {
     const history = useHistory();
     const sessionUser = useSelector(state => state.session.user);
     const albums = useSelector(state => Object.values(state.albums.all));
-    // const albums = useSelector(state => state.albums);
     const { id } = sessionUser;
     const [imageUrl, setImageUrl] = useState('');
     const [content, setContent] = useState('');
