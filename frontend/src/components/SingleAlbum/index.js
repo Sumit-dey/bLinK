@@ -43,7 +43,6 @@ function SingleAlbum() {
                         <img
                             className = 'single-album-img'
                             src = { image.imageUrl }
-                            alt = 'car'
                         />
                         <div className='single-album-content'>
                             {image.content}
