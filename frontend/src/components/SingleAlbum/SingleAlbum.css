@@ -1,35 +1,43 @@
-.homepage-headline-div {
+.single-album-title-div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.homepage-all-images {
+.single-album-title {
+    color: white;
+    margin: 0.5rem;
+}
+
+.single-album-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.homepage-nav-wrapper {
+.single-album-img-nav {
     width: 25%;
-    margin: 0.25rem;
     box-sizing: border-box;
+    margin: 1rem;
 }
 
-.homepage-indiv-image {
+.single-album-img-div {
     position: relative;
     width: 5rem;
     height: 10rem;
     overflow: hidden;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .25);
     width: 100%;
     transition: all 0.4s ease;
 }
 
-.homepage-indiv-image:hover {
-    transform: scale(1.05)
+.single-album-img-div:hover {
+    transform: scale(1.05);
 }
 
-.homepage-images {
+.single-album-img {
     position: absolute;
     margin: auto;
     top: -9999px;
@@ -37,8 +45,4 @@
     right: -9999px;
     left: -9999px;
     width: 100%;
-}
-
-.homepage-headline{
-    color: aliceblue;
 }

@@ -44,7 +44,7 @@ function Navigation({ isLoaded }) {
             <li className = 'logo-li'>
                 <div className = 'nav-left-container'>
                     <NavLink exact to = '/homepage'>
-                        <div className='bari'>blink</div>
+                        <img className='bari' src="https://cdn.discordapp.com/attachments/536996013911572484/935060045446664192/Screenshot_678.png"></img>
                     </NavLink>
                     {isLoaded && leftNavLinks}
                 </div>

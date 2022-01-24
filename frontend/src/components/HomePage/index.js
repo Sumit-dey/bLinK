@@ -7,9 +7,11 @@ import { loadImages } from '../../store/image';
 import './HomePage.css';
 
 function HomePage() {
-    const dispatch = useDispatch();
     const images = useSelector((state) => Object.values(state.image.all));
-
+    // const img = useSelector(state => state.imageReducer);
+    // console.log("hahahahah",img)
+    // const images=Object.assign([],img);
+    const dispatch = useDispatch();
     useEffect(() => {
         dispatch(loadImages())
     },[dispatch]);
@@ -25,7 +27,7 @@ function HomePage() {
                 </h1>
             </div>
             <div className = 'homepage-all-images'>
-                {images.length > 0 ? images.map(image => (
+                {images?.length > 0 ? images.map(image => (
                     <NavLink
                         className = 'homepage-nav-wrapper'
                         key = {image.id}
@@ -35,7 +37,7 @@ function HomePage() {
                         <div className = 'homepage-indiv-image'>
                             <img
                                 src = {image.imageUrl}
-                                alt = 'car'
+                                alt = 'Photo'
                                 className = 'homepage-images'
                             />
                         </div>

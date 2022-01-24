@@ -1,0 +1,64 @@
+.profile-single-img-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    box-sizing: border-box;
+}
+
+.profile-single-div-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 75%;
+    height: auto;
+    background-color: white;
+    border: 1px;
+    border-radius: 8px;
+}
+
+.profile-single-img-div {
+    position: relative;
+    width: 5rem;
+    height: auto;
+    box-sizing: border-box;
+    margin: 1rem;
+    width: auto;
+}
+
+.profile-single-img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.profile-single-img-content {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.profile-single-img-album {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.profile-img-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-single-img-buttons {
+    display: flex;
+    box-sizing: border-box;
+    margin: 1rem;
+    width: 75%;
+    gap: 2rem;
+}

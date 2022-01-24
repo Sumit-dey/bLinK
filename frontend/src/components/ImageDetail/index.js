@@ -28,7 +28,7 @@ function ImageDetail() {
                     <img
                         className = 'homepage-single-img'
                         src = {image.imageUrl}
-                        alt = 'car'
+                        alt = 'photo'
                     />
                 </div>
                 <div className = 'homepage-single-img-content'>{image.content}</div>
