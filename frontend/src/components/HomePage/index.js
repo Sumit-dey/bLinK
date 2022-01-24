@@ -34,7 +34,7 @@ function HomePage() {
                     >
                         <img
                             src = {image.imageUrl}
-                            alt = 'car'
+                            alt = 'Photos'
                             className = 'homepage-images'
                         />
                         <div
