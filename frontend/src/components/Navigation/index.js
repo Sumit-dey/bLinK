@@ -44,7 +44,7 @@ function Navigation({ isLoaded }) {
             <li className = 'logo-li'>
                 <div className = 'nav-left-container'>
                     <NavLink exact to = '/homepage'>
-                        <div className='bari' >Blink</div>
+                        <div className='bari'> Blink </div>
                     </NavLink>
                     {isLoaded && leftNavLinks}
                 </div>

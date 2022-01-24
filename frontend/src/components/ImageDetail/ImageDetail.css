@@ -78,7 +78,7 @@
     width: 5rem;
     border: 1px;
     border-radius: 4px;
-    background-color: #5AA9E6;
+    background-color: black;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -92,7 +92,7 @@
     width: 5rem;
     border: 1px;
     border-radius: 4px;
-    background-color: #F24236;
+    background-color: black;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -121,7 +121,7 @@
     width: 5.5rem;
     border: 1px;
     border-radius: 4px;
-    background-color: #5AA9E6;
+    background-color: black;
     color: white;
     font-size: 1rem;
     margin: 0.5rem 1rem;

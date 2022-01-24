@@ -34,7 +34,7 @@
     box-sizing: border-box;
     border: 1px;
     border-radius: 4px;
-    background-color: #F24236;
+    background-color: black;
     color: white;
     font-size: 1rem;
     height: 2rem;
@@ -50,7 +50,7 @@
     box-sizing: border-box;
     border: 1px;
     border-radius: 4px;
-    background-color: #5AA9E6;
+    background-color: black;
     color: white;
     font-size: 1rem;
     height: 2rem;
@@ -67,7 +67,7 @@
     width: 7rem;
     border: 1px;
     border-radius: 4px;
-    background-color: #F24236;
+    background-color: black;
     color: white;
     font-size: 1rem;
     transition: all 0.4s ease;

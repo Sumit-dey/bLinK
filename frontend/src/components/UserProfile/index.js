@@ -39,7 +39,6 @@ function UserProfile() {
                     >
                         <img
                             src = { image.imageUrl }
-                            alt = 'photo'
                             className = 'profile-images'
                         />
                         <div className='profile-image-content'>
