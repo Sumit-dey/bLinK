@@ -57,7 +57,7 @@ function UserImage() {
     useEffect(() => (
         dispatch(loadOneImage(id)),
         dispatch(getCommentsThunk(id))
-    ), [dispatch, id]);
+    )[dispatch, id]);
 
     const sessionUser = useSelector(state => state.session.user);
     if (!sessionUser) return <Redirect to = '/' />;

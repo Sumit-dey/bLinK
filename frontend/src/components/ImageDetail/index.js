@@ -56,7 +56,7 @@ function ImageDetail() {
     useEffect(() => (
         dispatch(loadOneImage(id)),
         dispatch(getCommentsThunk(id))
-    ), [dispatch, id]);
+    ) [dispatch, id]);
 
 
     if (!sessionUser) return <Redirect to = '/' />;
@@ -83,7 +83,7 @@ function ImageDetail() {
                         <img
                             className = 'homepage-single-img'
                             src = {image.imageUrl}
-                   
+
                         />
                     </div>
                     <div className = 'homepage-single-img-content'>
