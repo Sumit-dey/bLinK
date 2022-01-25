@@ -50,7 +50,7 @@ export const addCommentThunk = (comment) => async (dispatch) => {
     if (response.ok) {
         const data = await response.json()
         dispatch(addComment(data));
-        console.log('data this', data)
+        // console.log('data this', data)
         return data;
     }
 }
@@ -96,8 +96,8 @@ const commentsReducer = (state = {}, action) => {
         case ADD_COMMENT:
                 newState = { ...state };
                 newState[action.comment.id] = action.comment;
-                console.log('hello there', action)
-                console.log('hello there', action.comment)
+                // console.log('hello there', action)
+                // console.log('hello there', action.comment)
             return newState;
         case DELETE_COMMENT:
             newState = { ...state };

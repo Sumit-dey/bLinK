@@ -8,7 +8,7 @@ export default function EditComment({ setEditModal, editingComment }) {
     const dispatch = useDispatch();
     const user = useSelector(state => state.session.user);
 
-    console.log('edit id', editingComment.id)
+    // console.log('edit id', editingComment.id)
 
     const [actualComment, setActualComment] = useState(editingComment.comment);
     const [errors, setErrors] = useState('');

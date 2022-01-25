@@ -30,7 +30,7 @@ function HomePage() {
                         className = 'homepage-nav-wrapper'
                         key = {image.id}
                         to = {`/homepage/images/${image.id}`}
-                        onClick = {() => console.log('hit redirect')}
+                        // onClick = {() => console.log('hit redirect')}
                     >
                         <img
                             src = {image.imageUrl}

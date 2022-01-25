@@ -10,7 +10,7 @@ export default function DeleteComment({ setDeleteModal, commentId, commentUserId
 
     const handleSubmit = async (e) => {
         if (user.id === commentUserId) {
-            console.log('hello')
+            // console.log('hello')
             await dispatch(deleteCommentThunk(commentId));
             setDeleteModal(false);
         }

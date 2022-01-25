@@ -171,7 +171,7 @@ li {
 
 .login:hover {
     transform: scale(1.1);
-    color: black;
+    color: white;
     border: 1px black solid;
 }
 
@@ -200,4 +200,7 @@ li {
     background-color: black;
     padding: 20px;
     border-radius: 30px;
+}
+.fa-user-circle:before{
+    color: white;
 }

@@ -18,7 +18,7 @@ function EditImage({ image, setShowModal }) {
     const [albumId, setAlbumId] = useState('');
     const [errors, setErrors] = useState([]);
 
-    console.log('albums', albums)
+    // console.log('albums', albums)
     const validate = () => {
         const validationErrors = [];
         if (!content) validationErrors.push('Please provide content for your image.');
@@ -108,7 +108,7 @@ function EditImage({ image, setShowModal }) {
                         className = 'edit-image-field edit-image-submit'
                         type = 'submit'
                     >
-                        Edit
+                        Save
                     </button>
                     <button
                         onClick = {() => setShowModal(false)}
