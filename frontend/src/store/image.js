@@ -15,7 +15,7 @@ const loadOne = (image) => ({
 
 // action creators
 export const loadImages = () => async (dispatch) => {
-    const response = await csrfFetch('/api/images');
+    const response = await csrfFetch('/api/images/');
     const images = await response.json();
     dispatch(loadAll(images));
     return images;
