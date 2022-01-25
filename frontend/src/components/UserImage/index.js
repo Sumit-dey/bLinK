@@ -85,7 +85,7 @@ function UserImage() {
                         <img
                             className = 'profile-single-img'
                             src = {image.imageUrl}
-                            alt = 'car'
+                            alt = 'PHOTOSSSSS'
                         />
                     </div>
                     <div className = 'profile-single-img-content'>{image.content}</div>
