@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SplashPage from './components/SplashPage';
 import LoginFormPage from './components/LoginFormPage';
-import SignupFormPage from './components/SignupFormPage';
+import SignupFormPage from './components/SignUpFormPage';
 import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
 import ImageDetail from './components/ImageDetail';

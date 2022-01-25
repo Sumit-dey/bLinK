@@ -28,7 +28,6 @@ const removeAlbum = (album) => ({
 
 // action creators
 export const allAlbums = (userId) => async (dispatch) => {
-    
     const response = await csrfFetch(`/api/profile/${userId}/albums`);
 
     if (response.ok) {
