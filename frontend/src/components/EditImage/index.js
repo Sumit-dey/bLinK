@@ -18,7 +18,7 @@ function EditImage({ image, setShowModal }) {
     const [albumId, setAlbumId] = useState('');
     const [errors, setErrors] = useState([]);
 
-    // console.log('albums', albums)
+    console.log('albums', albums)
     const validate = () => {
         const validationErrors = [];
         if (!content) validationErrors.push('Please provide content for your image.');

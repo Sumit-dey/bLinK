@@ -11,7 +11,7 @@ function SingleAlbum() {
     const dispatch = useDispatch();
     const { id } = useParams();
     const album = useSelector(state => (state.albums.current));
-    // console.log('album', album)
+    console.log('album', album)
     useEffect(() => (
         dispatch(loadOneAlbum(id))
     ), [dispatch, id]);
