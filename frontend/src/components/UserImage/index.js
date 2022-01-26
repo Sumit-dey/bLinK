@@ -86,6 +86,7 @@ function UserImage() {
                             className = 'profile-single-img'
                             src = {image.imageUrl}
                             alt = 'PHOTOSSSSS'
+                            crossorigin="anonymous"
                         />
                     </div>
                     <div className = 'profile-single-img-content'>{image.content}</div>
