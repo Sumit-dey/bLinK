@@ -71,7 +71,7 @@ export default function EditComment({ setEditModal, editingComment }) {
                         onChange={(e) => setActualComment(e.target.value)}
                     />
                     <button className='edit-comment-submit'>
-                        Edit
+                        save
                     </button>
                 </form>
             </div>

@@ -114,7 +114,7 @@ function ImageDetail() {
                                             >
                                                 Edit
                                             </div>
-                                            <div
+                                            {/* <div
                                                 className = 'homepage-single-comment-delete'
                                                 onClick={() => {
                                                     setDeleteModal(true)
@@ -123,7 +123,7 @@ function ImageDetail() {
                                                 }}
                                             >
                                                 Delete
-                                            </div>
+                                            </div> */}
                                         </div>
                                     )}
                                 </div>
