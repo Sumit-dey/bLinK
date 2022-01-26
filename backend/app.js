@@ -18,9 +18,10 @@ app.use(cookieParser());
 app.use(express.json());
 
 // If in production, use cors
-if (!isProduction) {
-    app.use(cors());
-}
+// if (!isProduction) {
+//     app.use(cors());
+// }
+app.use(cors());
 
 // sets headers to secure the app
 app.use(helmet({
