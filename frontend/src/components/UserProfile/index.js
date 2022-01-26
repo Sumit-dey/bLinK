@@ -37,10 +37,10 @@ function UserProfile() {
                         key = {image.id}
                         to = {`/profile/images/${image.id}`}
                     >
-                        {/* <img
+                        <img
                             src = { image.imageUrl }
                             className = 'profile-images'
-                        /> */}
+                        />
                         <div className='profile-image-content'>
                             {image.content}
                         </div>
