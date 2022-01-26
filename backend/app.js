@@ -23,9 +23,12 @@ if (!isProduction) {
 }
 
 // sets headers to secure the app
-app.use(helmet({
-    contentSecurityPolicy: false
-}));
+// app.use(helmet({
+//     contentSecurityPolicy: false
+// }));
+
+
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 // sets _csurf token and creates req.csrfToken method
 app.use(
