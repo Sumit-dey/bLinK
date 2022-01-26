@@ -40,6 +40,7 @@ function UserProfile() {
                         <img
                             src = { image.imageUrl }
                             className = 'profile-images'
+                            crossorigin="anonymous"
                         />
                         <div className='profile-image-content'>
                             {image.content}
