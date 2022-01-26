@@ -84,6 +84,7 @@ function ImageDetail() {
                             className = 'homepage-single-img'
                             src = {image.imageUrl}
                             alt = 'PHOTOSSSSS'
+                            crossorigin="anonymous"
                         />
                     </div>
                     <div className = 'homepage-single-img-content'>
