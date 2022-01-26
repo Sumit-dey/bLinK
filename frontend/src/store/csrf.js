@@ -12,6 +12,10 @@ export async function csrfFetch(url, options = {}) {
         options.headers['XSRF-TOKEN'] = Cookies.get('XSRF-TOKEN');
     }
 
+    //added new line
+    options.headers['Cross-Origin-Resource-Policy'] = 'cross-origin';
+
+
     const res = await window.fetch(url, options);
 
     if (res.status >= 400) throw res;
