@@ -29,7 +29,7 @@ app.use(helmet({
 }));
 
 
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+// app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 // sets _csurf token and creates req.csrfToken method
 app.use(

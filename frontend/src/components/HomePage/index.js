@@ -36,6 +36,7 @@ function HomePage() {
                             src = {image.imageUrl}
                             alt = 'Photos'
                             className = 'homepage-images'
+                            crossorigin="anonymous"
                         />
                         <div
                             className = 'homepage-image-content'
