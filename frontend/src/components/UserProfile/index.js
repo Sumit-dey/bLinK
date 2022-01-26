@@ -32,10 +32,10 @@ function UserProfile() {
             </div>
             <div className = 'profile-all-images'>
                 { images.length > 0 ? images.map(image => (
-                    <NavLink
-                        className = 'profile-nav-wrapper'
-                        key = {image.id}
-                        to = {`/profile/images/${image.id}`}
+                    <div
+                        // className = 'profile-nav-wrapper'
+                        // key = {image.id}
+                        // to = {`/profile/images/${image.id}`}
                     >
                         <img
                             src = { image.imageUrl }
@@ -44,7 +44,7 @@ function UserProfile() {
                         <div className='profile-image-content'>
                             {image.content}
                         </div>
-                    </NavLink>
+                    </div>
                 )): null}
             </div>
         </div>
