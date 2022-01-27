@@ -23,7 +23,7 @@ if (!isProduction) {
 }
 // app.use(cors());
 
-// sets headers to secure the app
+
 // app.use(helmet({
 //     contentSecurityPolicy: false
 // }));
