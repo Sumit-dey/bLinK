@@ -127,7 +127,7 @@ function UserImage() {
                                             >
                                                 Edit
                                             </div>
-                                            <div
+                                            {/* <div
                                                 className = 'homepage-single-comment-delete'
                                                 onClick={() => {
                                                     setDeleteModal(true)
@@ -136,7 +136,7 @@ function UserImage() {
                                                 }}
                                             >
                                                 Delete
-                                            </div>
+                                            </div> */}
                                         </div>
                                     )}
                                 </div>
