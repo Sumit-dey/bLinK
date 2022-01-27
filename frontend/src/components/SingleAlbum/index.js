@@ -56,7 +56,7 @@ function SingleAlbum() {
                             className = 'single-album-img'
                             src = { image.imageUrl }
                             alt = 'PHOTOSSSSS'
-                            crossorigin="anonymous"
+                            // crossorigin="anonymous"
                         />
                         <div className='single-album-content'>
                             {image.content}
