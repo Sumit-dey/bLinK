@@ -55,3 +55,7 @@ This app includes the following features: Full CRUD for albums,Full crud for pho
 * react-scripts
 * redux
 * redux-thunk
+
+## Splash Page
+![splash](https://cdn.discordapp.com/attachments/536996013911572484/936331057341558884/Screenshot_714.png)
+
