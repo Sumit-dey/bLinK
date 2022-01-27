@@ -21,8 +21,8 @@ function UserImage() {
     const [actualComment, setActualComment] = useState('');
     const [deleteModal, setDeleteModal] = useState(false);
     const [editModal, setEditModal] = useState(false);
-    const [commentId, setCommentId] = useState('');
-    const [commentUserId, setCommentUserId] = useState('');
+    let [commentId, setCommentId] = useState('');
+    let [commentUserId, setCommentUserId] = useState('');
     const [editingComment, setEditingComment] = useState('');
     const [errors, setErrors] = useState('');
 
@@ -127,7 +127,7 @@ function UserImage() {
                                             >
                                                 Edit
                                             </div>
-                                            {/* <div
+                                            <div
                                                 className = 'homepage-single-comment-delete'
                                                 onClick={() => {
                                                     setDeleteModal(true)
@@ -136,7 +136,7 @@ function UserImage() {
                                                 }}
                                             >
                                                 Delete
-                                            </div> */}
+                                            </div>
                                         </div>
                                     )}
                                 </div>

@@ -4,6 +4,7 @@ const LOAD_ALBUMS = '/albums/loadAlbums';
 const LOAD_ALBUM = 'albums/loadAlbum';
 const ADD_ALBUM = '/albums/addAlbum';
 const REMOVE_ALBUM = '/albums/removeAlbum';
+const EDIT_ALBUM = '/albums/editAlbum';
 const REMOVE_USER = '/session/removeUser';
 
 const loadAlbums = (albums) => ({
@@ -25,6 +26,11 @@ const removeAlbum = (album) => ({
     type: REMOVE_ALBUM,
     album
 });
+
+const editAlbum= (album) => ({
+    type: EDIT_ALBUM,
+    album
+})
 
 // action creators
 export const allAlbums = (userId) => async (dispatch) => {
@@ -77,6 +83,20 @@ export const deleteAlbum = (album) => async (dispatch) => {
     }
 }
 
+export const editOneAlbum=(album)=>async (dispatch) =>{
+    const { id } = album;
+    const response = await csrfFetch(`/api/albums/${id}`,{
+        method : 'PUT',
+        body: JSON.stringify(album)
+    });
+
+    if (response.ok){
+        const album=await response.json();
+        dispatch(editAlbum(album));
+        return album;
+    }
+}
+
 const initialState = { all: {}, current: {} };
 
 const albumsReducer = (state = initialState, action) => {
@@ -101,6 +121,10 @@ const albumsReducer = (state = initialState, action) => {
             newState = { ...state };
             delete newState[action.album];
             delete newState.all[action.album.id];
+            return newState;
+        case EDIT_ALBUM:
+            newState={...state}
+            newState.all[action.album.id] = action.album;
             return newState;
         case REMOVE_USER:
             newState = { all: {}, current: {} };
