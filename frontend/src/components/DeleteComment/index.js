@@ -24,7 +24,7 @@ export default function DeleteComment({ setDeleteModal, commentId, commentUserId
             ></div>
             <div className='delete-comment-container'>
                 <h3 className='delete-comment-title'>
-                    Permanently Delete?
+                    Want to  Delete?
                 </h3>
                 <div className='delete-comment-buttons'>
                     <div

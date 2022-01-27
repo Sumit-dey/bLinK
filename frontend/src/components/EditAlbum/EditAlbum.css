@@ -1,0 +1,16 @@
+.profile-album-edit-button{
+    height: 2rem;
+    width: 6rem;
+    border: 1px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    margin-bottom: 15px;
+}
+
+
+.profile-album-edit-button:hover{
+    transform: scale(1.25);
+}

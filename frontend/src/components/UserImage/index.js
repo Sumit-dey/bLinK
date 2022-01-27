@@ -7,57 +7,57 @@ import DeleteImageModal from '../DeleteImage/DeleteImageModal';
 import EditImageModal from '../EditImage/EditImageModal';
 
 import './UserImage.css';
-// import { getCommentsThunk } from '../../store/comments';
-// import { addCommentThunk } from '../../store/comments';
-// import DeleteComment from '../DeleteComment';
-// import EditComment from '../EditComment';
+import { getCommentsThunk } from '../../store/comments';
+import { addCommentThunk } from '../../store/comments';
+import DeleteComment from '../DeleteComment';
+import EditComment from '../EditComment';
 
 function UserImage() {
     const dispatch = useDispatch();
     const { id } = useParams();
     const image = useSelector((state) => (state.userImage.current));
-    // const comments = useSelector(state => Object.values(state.comments));
+    const comments = useSelector(state => Object.values(state.comments));
 
-    // const [actualComment, setActualComment] = useState('');
+    const [actualComment, setActualComment] = useState('');
     const [deleteModal, setDeleteModal] = useState(false);
     const [editModal, setEditModal] = useState(false);
-    // let [commentId, setCommentId] = useState('');
-    // const [commentUserId, setCommentUserId] = useState('');
-    // const [editingComment, setEditingComment] = useState('');
+    let [commentId, setCommentId] = useState('');
+    let [commentUserId, setCommentUserId] = useState('');
+    const [editingComment, setEditingComment] = useState('');
     const [errors, setErrors] = useState('');
 
-    // const validate = () => {
-    //     const validationErrors = [];
-    //     if (!actualComment) validationErrors.push('Comment cannot be empty.');
-    //     if (actualComment.length > 255) validationErrors.push('Comment cannot exceed 255 characters.');
+    const validate = () => {
+        const validationErrors = [];
+        if (!actualComment) validationErrors.push('Comment cannot be empty.');
+        if (actualComment.length > 255) validationErrors.push('Comment cannot exceed 255 characters.');
 
-    //     return validationErrors;
-    // }
+        return validationErrors;
+    }
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setErrors([]);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setErrors([]);
 
-    //     const errors = validate();
+        const errors = validate();
 
-    //     if (errors && errors.length > 0) {
-    //         return setErrors(errors);
-    //     }
+        if (errors && errors.length > 0) {
+            return setErrors(errors);
+        }
 
-    //     const newComment = {
-    //         userId: sessionUser.id,
-    //         imageId: id,
-    //         comment: actualComment
-    //     }
+        const newComment = {
+            userId: sessionUser.id,
+            imageId: id,
+            comment: actualComment
+        }
 
-    //     await dispatch(addCommentThunk(newComment));
-    //     setActualComment('');
-    // }
+        await dispatch(addCommentThunk(newComment));
+        setActualComment('');
+    }
 
     useEffect(() => (
-        dispatch(loadOneImage(id))
-        // dispatch(getCommentsThunk(id))
-    )[dispatch, id]);
+        dispatch(loadOneImage(id)),
+        dispatch(getCommentsThunk(id))
+    ), [dispatch, id]);
 
     const sessionUser = useSelector(state => state.session.user);
     if (!sessionUser) return <Redirect to = '/' />;
@@ -66,7 +66,7 @@ function UserImage() {
 
     return (
         <>
-            {/* {deleteModal && (
+            {deleteModal && (
                 <DeleteComment
                     setDeleteModal={setDeleteModal}
                     commentId={commentId}
@@ -78,13 +78,15 @@ function UserImage() {
                     setEditModal={setEditModal}
                     editingComment={editingComment}
                 />
-            )} */}
+            )}
             <div className = 'profile-single-img-container'>
                 <div className = 'profile-single-div-style'>
                     <div className = 'profile-single-img-div'>
                         <img
                             className = 'profile-single-img'
                             src = {image.imageUrl}
+                            alt = 'PHOTOSSSSS'
+                            crossorigin="anonymous"
                         />
                     </div>
                     <div className = 'profile-single-img-content'>{image.content}</div>
@@ -101,7 +103,7 @@ function UserImage() {
                             />
                         </div>
                     </div>
-                    {/* {comments?.length > 0 && (
+                    {comments?.length > 0 && (
                         <div className = 'homepage-single-img-comments-holder'>
                             {comments ? comments.map(comment => (
                                 <div
@@ -140,7 +142,7 @@ function UserImage() {
                                 </div>
                             )) : null}
                         </div>
-                    )} */}
+                    )}
                     {errors.length > 0 && (<div className = 'new-image-errors-div'>
                         <ul className = 'new-image-errors-ul'>
                             { errors.map(error => (
@@ -153,7 +155,7 @@ function UserImage() {
                             ))}
                         </ul>
                     </div>)}
-                    {/* <form
+                    <form
                         className='homepage-single-img-form'
                         onSubmit={handleSubmit}
                     >
@@ -166,7 +168,7 @@ function UserImage() {
                         <button className='homepage-single-img-submit'>
                             Comment
                         </button>
-                    </form> */}
+                    </form>
                 </div>
             </div>
         </>

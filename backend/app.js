@@ -18,14 +18,18 @@ app.use(cookieParser());
 app.use(express.json());
 
 // If in production, use cors
-// if (!isProduction) {
-//     app.use(cors());
-// }
+if (!isProduction) {
+    app.use(cors());
+}
+// app.use(cors());
 
 // sets headers to secure the app
 app.use(helmet({
     contentSecurityPolicy: false
 }));
+
+
+// app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 // sets _csurf token and creates req.csrfToken method
 app.use(
