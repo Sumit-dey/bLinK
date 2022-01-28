@@ -74,7 +74,7 @@ router.delete('/:userId(\\d+)/images/:id(\\d+)', asyncHandler(async (req, res) =
     const { userId, id } = req.params;
 
     const image = await Image.findByPk(id);
-    console.log('image', image)
+    // console.log('image', image)
     const imageUserId = image.userId;
     if (+userId === imageUserId) {
         await image.destroy();
@@ -93,7 +93,7 @@ router.post('/:id(\\d+)/albums', albumValidation, asyncHandler(async (req, res) 
             userId,
             title
         });
-        console.log('newAlbum', newAlbum)
+        // console.log('newAlbum', newAlbum)
         await newAlbum.save();
         res.json(newAlbum)
     } else {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Redirect, NavLink } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ function SingleAlbum() {
     // const [editModal, setEditModal] = useState(false);
 
 
-    console.log('album', album)
+    // console.log('album', album)
     useEffect(() => (
         dispatch(loadOneAlbum(id))
     ), [dispatch, id]);

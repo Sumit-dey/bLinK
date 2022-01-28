@@ -52,6 +52,7 @@
     text-decoration: none;
     color: white;
     transition: all 0.4s ease;
+    /* background-color:white ; */
 }
 
 .all-albums-nav-wrapper:hover {
@@ -63,15 +64,17 @@
     min-width: 100%;
     object-fit: cover;
     vertical-align: bottom;
+
 }
 
 .all-albums-info {
     position: relative;
-    bottom: 35px;
+    bottom: 50px;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
     background-color: rgba(0, 0, 0, 0.4);
+
 }
 
 .all-albums-field {
