@@ -64,12 +64,12 @@ function AllAlbums() {
                                 `${album?.Images[0].imageUrl}` : null}
                             alt = ''
                         />
-                        <img
+                        {/* <img
                             className = 'all-albums-display'
                             src = {album?.Images?.length < 1 ?
                                 "https://www.lifewire.com/thmb/2KYEaloqH6P4xz3c9Ot2GlPLuds=/1920x1080/smart/filters:no_upscale()/cloud-upload-a30f385a928e44e199a62210d578375a.jpg" : null}
                             alt = ''
-                        />
+                        /> */}
 
                         <div className = 'all-albums-info'>
                             <div className = 'all-albums-field'>{album?.title}</div>
