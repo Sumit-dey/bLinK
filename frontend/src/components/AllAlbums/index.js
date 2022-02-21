@@ -42,22 +42,6 @@ function AllAlbums() {
                         to = {`/albums/${album?.id}`}
                         key = { album?.id }
                     >
-                        {/* {album.Images.length <1 &&
-                            <img
-                            className = 'all-albums-display'
-                            src = {album?.Images?.length < 1 ?
-                                "https://www.lifewire.com/thmb/2KYEaloqH6P4xz3c9Ot2GlPLuds=/1920x1080/smart/filters:no_upscale()/cloud-upload-a30f385a928e44e199a62210d578375a.jpg" : null}
-                            alt = 'Album Cover'
-                        />
-                        } */}
-                        {/* {album.Images.length > 0 &&
-                            <img
-                            className = 'all-albums-display'
-                            src = {album?.Images?.length > 0 ?
-                                `${album?.Images[0].imageUrl}` : null}
-                            alt = 'Album Cover'
-                        />
-                        } */}
                         <img
                             className = 'all-albums-display'
                             src = {album?.Images?.length > 0 ?

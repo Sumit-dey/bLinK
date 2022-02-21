@@ -13,7 +13,7 @@ function SplashPage() {
             <div className = 'splash-content-div'>
                 <h1 className = 'splash-h1'>Find your Inspiration.</h1>
                 <h3 className = 'splash-h3'>
-                Join the bLink community, home to tens of billions of photos.</h3>
+                Join the bLink community, home to tons of billions of photos.</h3>
                 <NavLink
                     className = 'splash-signup-link'
                     to = '/signup'>

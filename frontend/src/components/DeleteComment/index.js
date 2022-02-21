@@ -10,7 +10,6 @@ export default function DeleteComment({ setDeleteModal, commentId, commentUserId
 
     const handleSubmit = async (e) => {
         if (user.id === commentUserId) {
-            // console.log('hello')
             await dispatch(deleteCommentThunk(commentId));
             setDeleteModal(false);
         }
@@ -24,7 +23,7 @@ export default function DeleteComment({ setDeleteModal, commentId, commentUserId
             ></div>
             <div className='delete-comment-container'>
                 <h3 className='delete-comment-title'>
-                    Want to  Delete?
+                    Want to delete??
                 </h3>
                 <div className='delete-comment-buttons'>
                     <div
