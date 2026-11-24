@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
+import logo from './Blink.png';
 
 function Navigation({ isLoaded }) {
     const sessionUser = useSelector(state => state.session.user);
@@ -44,7 +45,7 @@ function Navigation({ isLoaded }) {
             <li className = 'logo-li'>
                 <div className = 'nav-left-container'>
                     <NavLink exact to = '/homepage'>
-                        <img className='bari' src='https://cdn.discordapp.com/attachments/536996013911572484/936373617736962100/fine.png' />
+                        <img className='bari' src={logo} alt='Blink' />
                     </NavLink>
                     {isLoaded && leftNavLinks}
                 </div>
